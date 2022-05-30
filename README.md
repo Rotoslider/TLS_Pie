@@ -12,6 +12,6 @@ Can be used indoors or Out.
 ![spheres 1](https://user-images.githubusercontent.com/15005663/170906925-9fbb11ce-d427-49cc-b66c-5d9a6bdd55d2.png)
 Cad files can be found here:
 https://grabcad.com/library/tls_pie-lidar-scanner-1
-Software to convert the Velodyne PCAP files to Point Clouds can be g=found here:
+Software to convert the Velodyne PCAP files to Point Clouds can be found here:
 https://github.com/Rotoslider/PCAP-to-Point-Cloud-for-TLS
 
