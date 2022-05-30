@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Terminal=false $ true opens extra terminal
+Name=TLS
+Icon=/home/lipi/TLS-Pie/TLSpcapR.png
+Exec=mate-terminal --geometry 50x15+10+600 -t scanner_press_control-C-to_close --zoom 2 --hide-menubar -e "bash -c 'sudo /home/lipi/TLS-Pie/VLPrecord.sh eth0;bash'"
+Name[en_US]=VLP16TLS

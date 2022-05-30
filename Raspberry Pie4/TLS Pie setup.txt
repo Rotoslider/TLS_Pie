@@ -1,0 +1,75 @@
+Install Ubuntu-mate 20.04 software onto SD card. I used 64bit version
+
+Check router to get ip address of Pie
+or from pie use in terminal to get ip address:
+
+Install ssh
+sudo apt install openssh-server
+
+use to find ip address:
+hostname -I
+
+use putty  in windows to remote into pie with:
+192.168.50.237
+login : lipi pw: 131313
+
+to run caja as root use from terminal:
+sudo caja
+
+sudo nano /boot/firmware/usercfg.txt 
+add to make work with no monitor:
+hdmi_force_hotplug=1
+hdmi_drive=2
+
+sudo nano /boot/firmware/syscfg.txt
+change to enable power light on pie:
+enable_uart=1
+control o writes file control x exits nano
+
+Install PIP:
+sudo apt install python3-pip
+
+Install RPi.GPIO 0.7.0
+pip3 install RPi.GPIO
+
+install packages:
+sudo apt install python3-dev python3-rpi.gpio git tcpdump
+
+fix python link:
+sudo ln -s /usr/bin/python3 /usr/bin/python
+
+Setup Velodyne
+Find info here:
+http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16
+open network settings at top
+add ip4 address for eth0 of 192.168.1.222
+in terminal:
+sudo ifconfig eth0 192.168.1.222
+sudo route add 192.168.1.201 eth0
+Open browser and type 192.168.1.201 to see if it works
+
+make sure tcpdump is installed
+sudo apt-get install tcpdump
+
+Copy TCP-Pie folder so its located as such:
+ /home/lipi/TLS-Pie
+create folder named TLS in lipi folder
+ Copy desktop icon to desktop
+
+Setup no password needed for sudo:
+sudo visudo (used nano in 20.04 instead of vi)
+
+under #includedir /etc/sudoers.d
+lipi ALL=(ALL:ALL) NOPASSWD:ALL
+control O to write Control X to exit then reboot
+
+use Start Applications to creat a startup command on boot
+edit command:
+sudo /home/lipi/TLS-Pie/record.sh eth0
+set time to 10 seconds
+
+
+
+
+
+
