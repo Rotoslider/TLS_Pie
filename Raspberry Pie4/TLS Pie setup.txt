@@ -65,7 +65,7 @@ control O to write Control X to exit then reboot
 
 use Start Applications to creat a startup command on boot
 edit command:
-sudo /home/lipi/TLS-Pie/record.sh eth0
+sudo /home/lipi/TLS-Pie/VLPrecord.sh eth0
 set time to 10 seconds
 
 
