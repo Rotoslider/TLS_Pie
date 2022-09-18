@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Terminal=false $ true opens extra gnome-terminal
-Name=Lidar
-Icon=/home/lipi/TLS-Pie/VLP16.jpg
-Exec=mate-terminal -e "bash -c '/home/lipi/TLS-Pie/LaunchVelodyne.sh;'"
-Name[en_US]=Lidar
